@@ -1,112 +1,240 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="16dp"
-       >
-
-
+    android:paddingStart="16dp"
+    android:paddingTop="8dp"
+  android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:paddingLeft="16dp">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:tag="@string/app_name"
-        android:textAllCaps="true"
-       android:textSize="20sp"
-        android:paddingTop="20dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="50dp"
-         />
-
-
-    </LinearLayout>
-
-    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="487dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="78dp"
-        android:layout_marginBottom="16dp"
-        android:orientation="horizontal"
-        android:paddingTop="200dp">
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="191dp"
-            android:layout_height="88dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-
-            android:layout_marginBottom="100dp"
-            android:outlineSpotShadowColor="@color/cardview_dark_background"
-            app:cardBackgroundColor="#7705dc"
-            app:cardCornerRadius="10dp" >
-
-            <Button
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp"
-                android:backgroundTint="#de648c"
-                android:ellipsize="start"
-                android:fontFamily="sans-serif-light"
-                android:shadowRadius="@android:integer/config_mediumAnimTime"
-                android:tag="@string/app_name"
-                android:text="calculate  kwvah"
-                android:textAllCaps="true"
-                android:textColor="#fafafa"
+        android:text="Quantity"
+        android:textAllCaps="true"
+        android:paddingBottom="8dp"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:layout_height="wrap_content"/>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+       <Button
+           android:background="@android:color/darker_gray"
+           android:layout_width="48dp"
+           android:height="48dp"
+           android:text="+"
+           android:textAppearance="@android:style/TextAppearance.Medium"
+           android:onClick="increment"
 
 
-                android:textSize="10sp" />
-        </androidx.cardview.widget.CardView>
+           android:textColor="@android:color/black"
+           android:layout_height="wrap_content"/>
+       <TextView
+           android:layout_width="wrap_content"
+           android:text="0"
+           android:id="@+id/quantityTextView"
+           android:textAllCaps="true"
+           android:paddingStart="16dp"
+           android:paddingLeft="16dp"
+           android:layout_marginRight="16dp"
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="200dp"
-            android:layout_height="170dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
+           android:textAppearance="@android:style/TextAppearance.Small"
+           android:layout_height="wrap_content"/>
+       <Button
+           android:background="@android:color/darker_gray"
+
+           android:text="-"
+           android:textAppearance="@android:style/TextAppearance.Medium"
+           android:onClick="decrement"
+           android:layout_width="48dp"
+           android:height="48dp"
+
+           android:textColor="@android:color/black"
+           android:layout_height="wrap_content"/>
+   </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Price"
+
+        android:textAllCaps="true"
+        android:paddingBottom="16dp"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Ksh 5"
+        android:id="@+id/priceTextView"
+        android:textAllCaps="true"
+        android:paddingBottom="16dp"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:background="@android:color/darker_gray"
+        android:layout_width="wrap_content"
+        android:text="Order"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:onClick="submitOrder"
+
+
+        android:textColor="@android:color/black"
+        android:layout_height="wrap_content"/>
 
 
 
-            android:layout_marginRight="20dp"
 
-            android:outlineSpotShadowColor="@color/cardview_dark_background"
-            app:cardBackgroundColor="#fadc"
-            app:cardCornerRadius="10dp" />
+<!--    <ImageView-->
+<!--        android:id="@+id/image"-->
+<!--        android:layout_width="56dp"-->
 
-        <!--     <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
-            android:tag="@string/app_name"
-            android:textAllCaps="true"
-            android:textSize="20sp"
-            android:paddingTop="20dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="50dp"
-            />-->
+<!--        android:src="@drawable/user5"-->
+<!--        android:scaleType="centerCrop"-->
 
 
+<!--        android:layout_height="56dp"-->
+<!--        android:contentDescription="TODO" />-->
+<!--    <TextView-->
+<!--        android:id="@+id/beach"-->
+<!--        android:paddingRight="8dp"-->
+<!--        android:layout_toRightOf="@id/image"-->
+<!--        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"-->
 
-    </RelativeLayout>
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Pebble Beach"-->
+<!--        />-->
+<!--    <TextView-->
+<!--        android:id="@+id/loc"-->
+<!--        android:layout_toRightOf="@id/image"-->
+<!--        android:layout_below="@id/beach"-->
+<!--        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="New York"-->
+<!--        android:layout_toEndOf="@id/image" />-->
+<!--    <TextView-->
+<!--        android:id="@+id/km"-->
+<!--        android:layout_toRightOf="@id/image"-->
+<!--        android:layout_below="@id/loc"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="10 Km Away"-->
+<!--        />-->
 
 
-</RelativeLayout>
+<!--        <ImageView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:layout_weight="1"-->
+<!--            android:src="@drawable/user5"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:contentDescription="TODO" />-->
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:text="You're Invited!"-->
+<!--            android:textFontWeight="0"-->
+<!--            android:textSize="36sp"-->
+<!--            android:background="@color/colorAccent"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:text="BonFire @ Beach"-->
+<!--        android:textFontWeight="0"-->
+<!--        android:textSize="18sp"-->
+<!--        android:background="@color/colorAccent"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+
+
+<!--   <LinearLayout-->
+<!--       android:layout_width="match_parent"-->
+<!--       android:orientation="horizontal"-->
+<!--       android:layout_marginTop="16dp"-->
+<!--       android:layout_marginEnd="16dp"-->
+<!--       android:layout_marginStart="16dp"-->
+<!--       android:layout_height="wrap_content">-->
+
+
+<!--       <TextView-->
+<!--           android:layout_width="0dp"-->
+<!--           android:layout_weight="1"-->
+<!--           android:text="@string/app_name"-->
+
+<!--           android:textSize="18sp"-->
+<!--           android:layout_marginStart="16dp"-->
+<!--           android:layout_marginEnd="16dp"-->
+<!--           android:layout_height="wrap_content"/>-->
+
+<!--       <TextView-->
+<!--           android:layout_width="0dp"-->
+<!--           android:layout_weight="1"-->
+
+<!--           android:text="Felex Kuria "-->
+
+<!--         android:textColor="#010101"-->
+<!--           android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"-->
+
+
+<!--           android:layout_height="wrap_content"/>-->
+<!--   </LinearLayout>-->
+<!--   <LinearLayout-->
+<!--       android:layout_width="match_parent"-->
+<!--       android:orientation="vertical"-->
+<!--       android:layout_marginStart="16dp"-->
+<!--       android:layout_marginEnd="16dp"-->
+
+<!--       android:layout_height="wrap_content">-->
+
+<!--       <ImageView-->
+
+<!--           android:layout_width="wrap_content"-->
+<!--           android:layout_height="wrap_content"-->
+<!--           android:scaleType="center"-->
+<!--           android:src="@drawable/logo"-->
+<!--           android:layout_marginStart="16dp"-->
+<!--           android:layout_marginEnd="16dp"-->
+<!--           android:contentDescription="TODO" />-->
+<!--       <EditText-->
+<!--           android:layout_width="match_parent"-->
+<!--           android:layout_height="wrap_content"-->
+<!--           style="@style/AppTheme"-->
+
+<!--           android:hint="Enter Phone Number"-->
+
+<!--           android:padding="16dp"-->
+<!--           android:layout_marginTop="0dp"-->
+<!--           android:layout_marginStart="16dp"-->
+<!--           android:layout_marginEnd="16dp"-->
+
+<!--           android:autofillHints="Enter Phone Number"-->
+<!--           android:inputType="number" />-->
+<!--       <EditText-->
+<!--           android:layout_width="match_parent"-->
+<!--           android:layout_height="wrap_content"-->
+<!--           android:hint="Enter Your Email"-->
+<!--           style="@style/TextAppearance.AppCompat.Button"-->
+
+<!--           android:padding="16dp"-->
+<!--           android:layout_marginTop="0dp"-->
+<!--           android:layout_marginStart="16dp"-->
+<!--           android:layout_marginEnd="16dp"-->
+
+
+<!--           android:autofillHints="Enter Email Address"-->
+<!--           android:inputType="textEmailAddress" />-->
+
+<!--   </LinearLayout>-->
+
+
+
+
+
+</LinearLayout>
